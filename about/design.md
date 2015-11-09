@@ -13,7 +13,7 @@
 
 ### 流程
 
-- A站页面根据产品规则，生成html页面，页面中有许多image url,如 http://img.adoringdress.com/images/cache/330x528_water_mark/adoringdress.com/product/201511/qC4RD096i9OazIv0DMi0ZUVNXEboiHUH.jpg
+- A站页面根据产品规则，生成html页面，页面中有许多image url,如 http://img.xxx.com/images/cache/330x528_water_mark/adoringdress.com/product/201511/qC4RD096i9OazIv0DMi0ZUVNXEboiHUH.jpg
 - 用户访问该页面，向该域名请求该图片。
 - A站前端架设静态缓存服务器Squid，varnish，CDN？ 如果有，命中，返回，如果没有，访问后端服务器，获取该图片，并存储。
 - 后端http 服务器 nginx，apache，收到请求，转发给 php image client 处理该请求（这里原本是可以直接去image server 请求的，不过为了对外隐蔽 ip指向，需要做一层封装），并返回该图片。
